@@ -1,0 +1,214 @@
+<html>	
+	<head>
+		<title>
+		Registration Form
+		</title>
+		<style>
+			body{
+				background-image: url("https://media0.giphy.com/media/v1.Y2lkPTc5MGI3NjExdTAyaXpxYWJ2anIwZWUxemFhdWtpbXhxc3h3bTV1MGM5bjMwejJkZCZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/10gJ9qSTW4mUFy/giphy.webp");
+				color: #20C20E;	
+				font-family: "Monaco", "Courier New", monospace;
+				margin: 0;
+				padding: 0;
+				display:flex;
+				justify-content: center;
+			}
+
+			.wrapper{
+				background-color: #110E0E;
+				height: 100vh;
+				padding: 0;
+				width: 60vw;
+	
+
+			}
+			
+			button{
+				background-color: #20C20E;
+				color: #000000;
+				border: 0px;
+				border-radius: 20px;
+				padding-top: 0.3rem;
+				padding-bottom: 0.3rem;
+				padding-left: 1.25rem;
+				padding-right: 1.25rem;
+				font-weight: bold;
+				font-family: "Monaco", "Courier New", monospace;
+			}
+
+			input::placeholder{
+				color: #1F1F1F;
+				font-family: "Lucida Console", "Courier New", monospace;
+				
+			}
+			input{
+				background-color: #6F6F6F;
+				border: 0px;
+				border-radius: 20px;
+				padding-top: 0.3rem;
+				padding-bottom: 0.3rem;
+				padding-left: 0.75rem;
+				padding-right: 0.75rem;
+			}
+			
+			select{
+				background-color: #6F6F6F;
+				border-radius: 20px;
+				padding-top: 0.25rem;
+				padding-bottom: 0.25rem;
+				padding-left: 0.75rem;
+				padding-right: 0.75rem;			
+			}
+			h1{
+				text-align: center;
+				font-size: 32px;
+				padding-top: 1rem;
+			}
+			
+			.gender-m{
+				margin-right: 3.5rem;
+			}
+
+			form{
+				display: flex;
+				justify-content: center;
+				align-items: center;
+				flex-direction: column;
+			}
+
+			.form-element{
+				display: flex;
+				margin-top: 0.5rem;
+				width: 21rem;
+				justify-content: space-between;		
+			}
+
+			.buttons{
+				width: 12.5rem;
+				margin-top: 1rem;
+			}
+
+			.no-m-top{
+				margin-top: 0;
+			}
+			
+			.row{
+				display:flex;
+			}
+
+			.gender{
+				font-size: 12px;
+			}
+			
+			.fav{
+				font-size: 12px;
+			}
+			
+			#favTit{
+				margin-right: 1.5rem;
+			}
+
+			.m-top{
+				margin-top: 2rem;
+			}
+
+		</style>
+	</head>
+	<body>
+		<div class="wrapper">
+		<h1>Registration Form</h1>
+		<form method="POST" action="validate.php">
+			<div class="form-element no-m-top">	
+				Email:
+				<input id="email" type="text" name="email" placeholder="Enter your Email">
+			</div>
+			<div class="form-element">
+				Password:
+				<input id="email" type="password" name="pass" placeholder="Password">
+			</div>
+			<div class="form-element">
+				First Name:
+				<input id="email" name="first" placeholder="First Name">
+			</div>
+			<div class="form-element">
+				Last Name:
+				<input id="email" name="last" placeholder="Last Name" clear>
+			</div>
+			<div class="form-element">
+				<div class="gender-m">Gender:</div>
+				<div class="gender">
+					Male
+					<input type="radio" name="Gender" value="M" id="M">
+				</div>
+				
+				<div class="gender">
+					Female
+					<input type="radio" name="Gender" value="F" id="F">
+				</div> 
+				<div class="gender">
+					Other
+					<input type="radio" name="Gender" value="O" id="O">
+				</div>
+			</div>
+			<div class="form-element">
+				Area:
+				<select name="choice">
+					<option value="web">Web Programming</option>	
+					<option value="DSA">DSA</option>
+					<option value="MF">MFCS</option>
+					<option value="bee">BEE</option>
+				</select>
+					
+			</div>
+			<div class="form-element">
+				Phone Number:
+				<input id="tel" type="number" name="number" placeholder="Phone Number" clear>
+			</div>
+			<div class="form-element">
+				<div>Date Of Birth:</div>
+				<input id="dob" type="date" name="dob" placeholder="Phone Number" clear>
+			</div>
+			<div class="form-element">
+				<div>Address:</div>
+				<input id="dob" type="text" name="addy" placeholder="Address" clear>
+			</div>
+			<div class="form-element">
+				<div id="favTit">Favorites:</div>
+				<div class="fav">
+					DSA 
+					<input type="checkbox" name="favs[]" value="DSA" id="M">
+				</div>
+				<div class="fav">
+					DL
+					<input type="checkbox" name="favs[]" value="DL" id="F">
+				</div> 
+				<div class="fav">
+					ML
+					<input type="checkbox" name="favs[]" value="ML" id="O">
+				</div>
+				<div class="fav">
+					CPP
+					<input type="checkbox" name="favs[]" value="CPP" id="P">
+				</div>
+			</div>
+			
+
+			<div class="form-element buttons">
+				<button type="reset">
+					Reset					
+				</button>
+				
+				<button type="submit">
+					Submit
+				</button>
+			</div>
+
+			
+			<marquee width="100%" direction="left" class="m-top">
+				Fill in your details and register now! Make sure the details you enter are accurate.
+			</marquee>
+			
+		</form>
+		</div>
+	</body>
+</html>
